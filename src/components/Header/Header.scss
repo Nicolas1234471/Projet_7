@@ -1,0 +1,26 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    max-width: 1240px;
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 20px;
+
+        a {
+            font-family: 'Montserrat';
+            color: #000000;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
