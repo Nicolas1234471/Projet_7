@@ -1,0 +1,16 @@
+.tag {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    background-color: #FF6060;
+    border-radius: 10px;
+    padding: 5px;
+
+    h3 {
+        margin: 0;
+        font-size: 14px;
+
+    }
+}

@@ -4,12 +4,11 @@ import './Banner.scss'
 import imageMountains from '../../assets/mountains-view.jpg';
 import imagePlains from '../../assets/mountain-plains.png';
 
-function Banner() {
-    const titleBanner = 'Chez vous, partout et ailleurs'
+function Banner({ imgBanner, imgText }) {
     return (
         <div className='home-banner'>
-            <img src={imageMountains} alt='paysage montagneux' className='home-banner-image'/>
-            <h1 className='home-banner-title'>{titleBanner}</h1>
+            <img src={imgBanner} alt='paysage montagneux' className='home-banner-image'/>
+            <h1 className='home-banner-title'>{imgText}</h1>
         </div>
     )
 }

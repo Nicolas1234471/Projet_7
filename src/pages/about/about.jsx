@@ -6,7 +6,7 @@ import './about.scss';
 function About() {
     return (
         <div>
-            <Banner />
+            <Banner imgBanner='../../mountain-plains.png' imgText=''/>
             <Collapse />
         </div>
     );
