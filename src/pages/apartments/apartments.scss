@@ -5,6 +5,12 @@
     margin: auto;
     font-family: 'Montserrat';
 
+    .apartments-collapse-container {
+        display: flex;
+        flex-direction: row;
+
+    }
+
 }
 
 .apartments-details-text-rating-container {
@@ -79,3 +85,24 @@
         }
     }
 }
+
+.collapse-container {
+    max-width: 582px;
+    width: 100%;
+
+    .collapse-item {
+        max-width: 582px;
+        width: 100%;
+    }
+
+    .collapse-content {
+        max-width: 582px;
+    }
+
+    .collapse-content-expanded {
+        max-width: 582px;
+        text-align: start;
+
+    }
+}
+

@@ -1,9 +1,37 @@
+* {
+    font-family: 'Montserrat';
+}
+
 header {
     max-width: 1240px;
     width: 100%;
     margin: auto;
     margin-top: 30px;
     margin-bottom: 40px;
+}
+
+.about-collapse-container {
+    max-width: 1023px;
+    margin: auto;
+}
+
+.collapse-container {
+    max-width: 1023px;
+    width: 100%;
+
+    .collapse-item {
+        max-width: 1023px;
+        width: 100%;
+    }
+
+    .collapse-content {
+        max-width: 1023px;
+    }
+
+    .collapse-content-expanded {
+        max-width: 1023px;
+
+    }
 }
 
 footer {

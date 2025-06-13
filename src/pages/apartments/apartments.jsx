@@ -3,17 +3,23 @@ import { useParams } from 'react-router-dom';
 import Card from '../../components/Card/Card.jsx';
 import Tags from '../../components/Tags/Tags.jsx';
 import Collapse from '../../components/Collapse/Collapse.jsx';
-import apartmentsData from '../../data/apartments-data.json';
 
-function Apartments() {
+function Apartments({ apartmentsData }) {
     const { id } = useParams();
 
     const apartment = apartmentsData.find((apartment) => apartment.id === id);
 
-    const collapseApartments = [
-        {id: 1, title: "Description", content: "apartment.description"},
-        {id: 2, title: "Équipements", content: "apartment.equipments"}
-    ];
+    const apartmentsCollapse = [
+        {    
+            "title": "Description",
+            "content": apartment.description
+        },
+        {
+            "title": "Équipements",
+            "content": apartment.equipments
+        }
+    ]
+
 
     return (
         <div className="apartments-details-container">
@@ -40,8 +46,10 @@ function Apartments() {
                     <div className="rating"></div>
                 </div>
             </div>
-            <div className="apartments-collapse-container">
-                <Collapse />
+            <div className='apartments-collapse-container'>
+                {apartmentsCollapse.map(({ title, content }, index) => (
+                    <Collapse key={index} title={title} content={content} />
+                ))}
             </div>
         </div>
     );
