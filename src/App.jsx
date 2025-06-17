@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer.jsx';
 import Home from './pages/home/home.jsx';
 import About from './pages/about/about.jsx';
 import Apartments from './pages/apartments/apartments.jsx';
+import NotFound from './pages/not_found/not_found.jsx';
 import apartmentsData from './data/apartments-data.json';
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
                         path="/property/:id"
                         element={<Apartments apartmentsData={apartments} />}
                     />
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
                 <Footer />
             </div>

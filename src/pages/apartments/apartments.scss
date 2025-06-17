@@ -5,10 +5,47 @@
     margin: auto;
     font-family: 'Montserrat';
 
-    .apartments-collapse-container {
-        display: flex;
-        flex-direction: row;
+    .apartments-details-slider-container {
 
+
+        .slider {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1240px;
+            width: 100%;
+            height: 415px;
+            border-radius: 25px;
+
+            .slider-image {
+                max-width: 1240px;
+                width: 100%;
+                height: 415px;
+                object-fit: cover;
+                border-radius: 25px;
+            }
+
+            .slider-image-hidden {
+                display: none;
+            }
+
+            .slider-arrow-left {
+                position: absolute;
+                left: 25px;
+                cursor: pointer;
+            }
+
+            .slider-arrow-right {
+                position: absolute;
+                right: 25px;
+                cursor: pointer;
+            }
+
+            .slider-count {
+
+            }
+        }
     }
 
 }
@@ -86,23 +123,29 @@
     }
 }
 
-.collapse-container {
-    max-width: 582px;
-    width: 100%;
+.apartments-collapse-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
 
-    .collapse-item {
+    .collapse-container {
         max-width: 582px;
         width: 100%;
-    }
 
-    .collapse-content {
-        max-width: 582px;
-    }
+        .collapse-item {
+            max-width: 582px;
+        }
 
-    .collapse-content-expanded {
-        max-width: 582px;
-        text-align: start;
+        .collapse-content {
+            max-width: 582px;
+        }
 
+        .collapse-content-expanded {
+            max-width: 582px;
+            text-align: start;
+
+        }
     }
 }
 

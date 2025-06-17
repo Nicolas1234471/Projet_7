@@ -1,7 +1,5 @@
 import { NavLink } from 'react-router-dom';
 import './Card.scss';
-import apartments from '../../data/apartments-data.json';
-console.log(apartments)
 
 function Card({ id, apartment }) {
     return (

@@ -1,7 +1,8 @@
 import './apartments.scss';
 import { useParams } from 'react-router-dom';
-import Card from '../../components/Card/Card.jsx';
+import Slider from '../../components/Slider/Slider.jsx';
 import Tags from '../../components/Tags/Tags.jsx';
+import Rating from'../../components/Rating/Rating.jsx';
 import Collapse from '../../components/Collapse/Collapse.jsx';
 
 function Apartments({ apartmentsData }) {
@@ -16,14 +17,22 @@ function Apartments({ apartmentsData }) {
         },
         {
             "title": "Équipements",
-            "content": apartment.equipments
+            "content": (
+                <div>
+                    {apartment.equipments.map((equipment, index) => (
+                        <div key={index}>{equipment}</div>
+                    ))}
+                </div>
+            )
         }
     ]
 
 
     return (
         <div className="apartments-details-container">
-            <div className="apartments-details-carousel"></div>
+            <div className="apartments-details-slider-container">
+                <Slider sliderData={apartment.pictures} />
+            </div>
             <div className="apartments-details-text-rating-container">
                 <div className="apartments-details-title-tags-container">
                     <div className="title-container">
@@ -43,7 +52,9 @@ function Apartments({ apartmentsData }) {
                         </h3>
                         <img src={apartment.host.picture} alt='' className='host-picture'/>
                     </div>
-                    <div className="rating"></div>
+                    <div className="rating">
+                        <Rating />
+                    </div>
                 </div>
             </div>
             <div className='apartments-collapse-container'>
