@@ -9,7 +9,7 @@
     .home-banner-image {
         max-width: 1240px;
         width: 100%;
-        max-height: 223px;
+        height: 223px;
         object-fit: cover;
         border-radius: 25px;
         filter: brightness(0.4);
@@ -26,5 +26,32 @@
         font-weight: 700;
         color: #FFFFFF;
         width: 100%;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+/*** RESPONSIVE ***/
+
+@media screen and (max-width: 768px) {
+    .home-banner {
+        text-align: start;
+        border-radius: 10px;
+        max-width: 768px;
+        height: 111px;
+        margin: auto;
+
+        .home-banner-image {
+            max-width: 768px;
+            height: 111px;
+            border-radius: 10px;
+        }
+
+        .home-banner-title {
+            transform: translate(-60%, -50%);
+            font-size: 24px;
+            width: 70%;
+            padding: 0px;
+        }
     }
 }

@@ -4,11 +4,16 @@ import Slider from '../../components/Slider/Slider.jsx';
 import Tags from '../../components/Tags/Tags.jsx';
 import Rating from'../../components/Rating/Rating.jsx';
 import Collapse from '../../components/Collapse/Collapse.jsx';
+import NotFound from '../not_found/not_found.jsx';
 
 function Apartments({ apartmentsData }) {
     const { id } = useParams();
 
     const apartment = apartmentsData.find((apartment) => apartment.id === id);
+
+    if (!apartment) {
+        return <NotFound />
+    }
 
     const apartmentsCollapse = [
         {    
@@ -26,7 +31,6 @@ function Apartments({ apartmentsData }) {
             )
         }
     ]
-
 
     return (
         <div className="apartments-details-container">
@@ -52,9 +56,7 @@ function Apartments({ apartmentsData }) {
                         </h3>
                         <img src={apartment.host.picture} alt='' className='host-picture'/>
                     </div>
-                    <div className="rating">
-                        <Rating />
-                    </div>
+                    <Rating ratingData={apartment.rating} />
                 </div>
             </div>
             <div className='apartments-collapse-container'>
@@ -67,3 +69,5 @@ function Apartments({ apartmentsData }) {
 }
 
 export default Apartments;
+
+/** A FAIRE LA PROCHAINE FOIS: RETIRER LES DOUBLONS DANS APARTMENTS.SCSS, HOME.SCSS et ABOUT.SCSS PEUT ETRE. FAIRE LE RESPONSIVE DE LA PAGE NOT FOUND ET GERER LES DOUBLONS AUSSI. **/

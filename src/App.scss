@@ -1,8 +1,15 @@
-#root {
-  text-align: center;
+* {
   box-sizing: border-box;
 }
 
+#root {
+  text-align: center;
+  font-family: 'Montserrat';
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0;
 }

@@ -1,60 +1,94 @@
-* {
-    box-sizing: border-box;
-}
+.collapse-container {
 
-.collapse-item {
-    background-color: #FF6060;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 5px;
-    width: 100%;
-    height: 52px;
+    .collapse-item {
+        background-color: #FF6060;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        width: 100%;
+        height: 52px;
 
 
-    .collapse-title {
-        position: relative;
-        left: 20px;
-        color: white;
-        font-family: 'Montserrat';
-        font-weight: 700;
-        font-size: 24px;
-    }
+        .collapse-title {
+            position: relative;
+            left: 20px;
+            color: white;
+            font-family: 'Montserrat';
+            font-weight: 700;
+            font-size: 24px;
+        }
 
-    .collapse-arrow {
-        position: relative;
-        right: 20px;
-        color: white;
-        transition: transform 1s ease;
-    
-    }
-
-    .collapse-arrow-expanded {
-        transform: rotate(180deg);
-    }
-
-}
-
-.collapse-content {
-    display: block;
-    text-align: start;
-    border-radius: 5px;
-    background-color: #F6F6F6;
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 15px;
-    transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+        .collapse-arrow {
+            position: relative;
+            right: 20px;
+            color: white;
+            transition: transform 1s ease;
         
+        }
+
+        .collapse-arrow-expanded {
+            transform: rotate(180deg);
+        }
+
+    }
+
+    .collapse-content {
+        display: block;
+        text-align: start;
+        border-radius: 5px;
+        background-color: #F6F6F6;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 15px;
+        transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+        
+    }
+
+    .collapse-content-expanded {
+        display: block;
+        text-align: start;
+        border-radius: 5px;
+        background-color: #F6F6F6;
+        max-height: 227px;
+        opacity: 1;
+        padding: 15px;
+        
+    }
 }
 
-.collapse-content-expanded {
-    display: block;
-    text-align: start;
-    border-radius: 5px;
-    background-color: #F6F6F6;
-    max-height: 227px;
-    opacity: 1;
-    padding: 15px;
-    
+@media screen and (max-width: 768px) {
+
+    .collapse-container {
+        max-width: 768px;
+
+        .collapse-item {
+            max-width: 768px;
+            height: 30px;
+
+            .collapse-title {
+                left: 12px;
+                font-weight: 700;
+                font-size: 13px;
+            }
+
+            .collapse-arrow {
+                width: 16px;
+                height: 9px;
+                right: 15px;
+            
+            }
+        }
+
+        .collapse-content {
+            max-width: 768px;
+            font-size: 13px;
+            
+        }
+
+        .collapse-content-expanded {
+            max-width: 768px;
+        }
+    }
 }

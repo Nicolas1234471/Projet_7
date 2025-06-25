@@ -5,10 +5,12 @@ import './Header.scss';
 function Header() {
     return (
         <header>
-            <img src={logoKasaRed} alt='Logo Kasa Red' className='logo-kasa-red'/>
-            <div className='nav-links'>
-                <NavLink to="/">Accueil</NavLink>
-                <NavLink to="/about">À propos</NavLink>
+            <div className='header-flex-container'>
+                <img src={logoKasaRed} alt='Logo Kasa Red' className='logo-kasa-red'/>
+                <div className='nav-links'>
+                    <NavLink to="/">Accueil</NavLink>
+                    <NavLink to="/about">À propos</NavLink>
+                </div>
             </div>
         </header>
 )};

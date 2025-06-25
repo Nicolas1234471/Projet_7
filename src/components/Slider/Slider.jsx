@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import SliderArrowLeft from '../../assets/slider-arrow-left.svg';
 import SliderArrowRight from '../../assets/slider-arrow-right.svg';
-import Slides from '../../data/apartments-data.json';
+import './Slider.scss';
 
 function Slider({ sliderData }) {
 
@@ -27,8 +27,8 @@ function Slider({ sliderData }) {
                 );
             })}
             <img className='slider-arrow-right' src={SliderArrowRight} onClick={nextSlide} />
-            <span class='slider-count'>
-                
+            <span className='slider-count'>
+                {slide + 1}/{sliderData.length}
             </span>
         </div>
     );

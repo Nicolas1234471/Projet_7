@@ -26,7 +26,7 @@ function About() {
     ]
     
     return (
-        <div>
+        <div className='about-banner-collapse-container'>
             <Banner imgBanner='../../mountain-plains.png' imgText=''/>
             <div className='about-collapse-container'>
                 {aboutCollapse.map(({ title, content }, index) => (

@@ -1,11 +1,28 @@
-import StarRating from '../../assets/star-rating.svg';
+import { useState } from 'react';
+import StarActive from '../../assets/star-active.svg';
+import StarInactive from '../../assets/star-inactive.svg';
+import './Rating.scss';
 
-function Rating () {
+function Rating ({ ratingData }) {
 
+    function generateStar() {
+        const ratingArray = []
+        for (let i = 0; i < 5; i++) {
+            if (i < ratingData)
+                ratingArray.push(<img key={i} src={StarActive} className='star-full' />)
+            else {
+                ratingArray.push(<img key={i} src={StarInactive} className='star-empty' />)
+            }
+        }
+        return ratingArray
+
+    }
+
+    return (
+        <div className='rating-container'>
+            {generateStar()}
+        </div>
+    )
 }
 
 export default Rating;
-
-/* Générer un composant étoile x5, puis récupérer le rating dans la data, et appliquer la classe qui colore l'étoile en fonction du rating récupéré et sur le bon nombre d'étoiles */
-
-/* OU générer un nombre d'étoiles colorées de base par rapport au rating récupéré dans la data, PUIS si le nombre d'étoiles est < étoiles.length alors on ajoute une étoile grise */
