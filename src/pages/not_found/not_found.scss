@@ -28,3 +28,26 @@
         margin-bottom: 100px;
     }
 }
+
+@media screen and (max-width: 768px) {
+
+    .notfound-container {
+
+        .notfound-number {
+            font-size: 96px;
+            margin-bottom: 100px;
+
+        }
+
+        .notfound-text {
+            width: 60%;
+            font-size: 18px;
+            font-weight: 500;
+
+        }
+
+        .notfound-redirect {
+            font-size: 14px;
+        }
+    }
+}
