@@ -1,11 +1,11 @@
 import './Tags.scss';
 
-function Tags ({ tag }) {
+function Tags({ tag }) {
     return (
-        <div className='tag'>
+        <div className="tag">
             <h3>{tag}</h3>
         </div>
-    )
+    );
 }
 
-export default Tags
+export default Tags;

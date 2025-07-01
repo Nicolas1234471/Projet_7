@@ -7,6 +7,10 @@
     margin-bottom: 40px;
     font-family: 'Montserrat';
 
+    .apartments-details-slider-container {
+        max-width: 1240px;
+        height: 415px;
+    }
 }
 
 .apartments-details-text-rating-container {
@@ -14,7 +18,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
 
     .apartments-details-title-tags-container {
         display: flex;
@@ -31,7 +34,6 @@
             font-size: 14px;
             font-weight: 700;
             height: 25px;
-
         }
 
         .title-container {
@@ -40,12 +42,12 @@
             gap: 5px;
 
             .apartment-title {
-            font-size: 36px;
-            font-weight: 500;
-            text-align: start;
-            color: #FF6060;
-            margin-top: 30px;
-            margin-bottom: 0;
+                font-size: 36px;
+                font-weight: 500;
+                text-align: start;
+                color: #ff6060;
+                margin-top: 30px;
+                margin-bottom: 0;
             }
 
             span {
@@ -54,7 +56,6 @@
                 font-weight: 500;
                 display: block;
             }
-
         }
     }
 
@@ -75,7 +76,7 @@
                 text-align: end;
                 font-size: 18px;
                 font-weight: 500;
-                color: #FF6060;
+                color: #ff6060;
                 width: 93px;
                 height: 52px;
                 margin: 0;
@@ -86,16 +87,13 @@
                 height: 64px;
                 border: 1px solid grey;
                 border-radius: 50%;
-
             }
-
         }
 
         .rating {
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
-
         }
     }
 }
@@ -125,7 +123,6 @@
             max-width: 582px;
             text-align: start;
             border-radius: 10px;
-
         }
     }
 }
@@ -133,10 +130,13 @@
 /*** RESPONSIVE ***/
 
 @media screen and (max-width: 768px) {
-
     .apartments-details-container {
         margin-bottom: 35px;
 
+        .apartments-details-slider-container {
+            max-width: 768px;
+            height: 255px;
+        }
     }
 
     .apartments-details-text-rating-container {
@@ -161,17 +161,16 @@
                 gap: 10px;
                 border-radius: 10px;
                 height: 18px;
-
             }
 
             .title-container {
                 gap: 0px;
 
                 .apartment-title {
-                font-size: 18px;
-                margin-top: 10px;
-                margin-bottom: 10px;
-                padding-right: 70px;
+                    font-size: 18px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    padding-right: 70px;
                 }
 
                 span {
@@ -203,7 +202,6 @@
                     width: 32px;
                     height: 32px;
                     border-radius: 50%;
-
                 }
             }
         }
@@ -234,9 +232,7 @@
             .collapse-content-expanded {
                 max-width: 768px;
                 border-radius: 5px;
-
             }
         }
     }
 }
-

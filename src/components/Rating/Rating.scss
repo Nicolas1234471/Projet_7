@@ -4,7 +4,8 @@
     align-items: center;
     gap: 15px;
 
-    .star-full, .star-empty {
+    .star-full,
+    .star-empty {
         width: 25px;
         height: 24px;
     }
@@ -13,14 +14,14 @@
 /** RESPONSIVE **/
 
 @media screen and (max-width: 768px) {
-    
     .rating-container {
         max-width: 98px;
         width: 100%;
         height: 18px;
         gap: 8px;
 
-        .star-full, .star-empty {
+        .star-full,
+        .star-empty {
             width: 18px;
             height: 18px;
         }

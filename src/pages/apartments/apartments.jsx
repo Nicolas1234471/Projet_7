@@ -2,7 +2,7 @@ import './apartments.scss';
 import { useParams } from 'react-router-dom';
 import Slider from '../../components/Slider/Slider.jsx';
 import Tags from '../../components/Tags/Tags.jsx';
-import Rating from'../../components/Rating/Rating.jsx';
+import Rating from '../../components/Rating/Rating.jsx';
 import Collapse from '../../components/Collapse/Collapse.jsx';
 import NotFound from '../not_found/not_found.jsx';
 
@@ -12,25 +12,25 @@ function Apartments({ apartmentsData }) {
     const apartment = apartmentsData.find((apartment) => apartment.id === id);
 
     if (!apartment) {
-        return <NotFound />
+        return <NotFound />;
     }
 
     const apartmentsCollapse = [
-        {    
-            "title": "Description",
-            "content": apartment.description
+        {
+            title: 'Description',
+            content: apartment.description,
         },
         {
-            "title": "Équipements",
-            "content": (
+            title: 'Équipements',
+            content: (
                 <div>
                     {apartment.equipments.map((equipment, index) => (
                         <div key={index}>{equipment}</div>
                     ))}
                 </div>
-            )
-        }
-    ]
+            ),
+        },
+    ];
 
     return (
         <div className="apartments-details-container">
@@ -40,7 +40,7 @@ function Apartments({ apartmentsData }) {
             <div className="apartments-details-text-rating-container">
                 <div className="apartments-details-title-tags-container">
                     <div className="title-container">
-                        <h3 className='apartment-title'>{apartment.title}</h3>
+                        <h3 className="apartment-title">{apartment.title}</h3>
                         <span>{apartment.location}</span>
                     </div>
                     <div className="tags-container">
@@ -51,15 +51,17 @@ function Apartments({ apartmentsData }) {
                 </div>
                 <div className="apartments-details-host-rating-container">
                     <div className="host-picture-container">
-                        <h3>
-                            {apartment.host.name}
-                        </h3>
-                        <img src={apartment.host.picture} alt='' className='host-picture'/>
+                        <h3>{apartment.host.name}</h3>
+                        <img
+                            src={apartment.host.picture}
+                            alt=""
+                            className="host-picture"
+                        />
                     </div>
                     <Rating ratingData={apartment.rating} />
                 </div>
             </div>
-            <div className='apartments-collapse-container'>
+            <div className="apartments-collapse-container">
                 {apartmentsCollapse.map(({ title, content }, index) => (
                     <Collapse key={index} title={title} content={content} />
                 ))}

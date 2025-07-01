@@ -7,21 +7,20 @@
     margin-bottom: 43px;
     padding: 0px 20px 0px 20px;
 
-        .apartments-container {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-            align-items: center;
-            background-color: #F6F6F6;
-            width: 100%;
-            height: 100%;
-            border-radius: 25px;
-            gap: 60px;
-            padding-top: 60px;
-            padding-bottom: 40px;
-            margin: auto;
-
-        }
+    .apartments-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #f6f6f6;
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        gap: 60px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+        margin: auto;
+    }
 }
 
 /*** RESPONSIVE ***/
@@ -39,7 +38,6 @@
             padding-top: 20px;
             padding-bottom: 25px;
             margin: auto;
-
         }
     }
 }

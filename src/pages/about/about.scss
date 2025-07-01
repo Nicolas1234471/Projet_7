@@ -24,16 +24,13 @@
 
             .collapse-content-expanded {
                 max-width: 1023px;
-
             }
         }
     }
 }
 
 @media screen and (max-width: 768px) {
-
     .about-banner-collapse-container {
-
         .about-collapse-container {
             max-width: 768px;
             gap: 25px;
@@ -53,7 +50,6 @@
 
                 .collapse-content-expanded {
                     max-width: 768px;
-
                 }
             }
         }
