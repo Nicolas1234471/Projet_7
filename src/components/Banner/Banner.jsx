@@ -1,12 +1,14 @@
 import './Banner.scss';
 
-function Banner({ imgBanner, imgText }) {
+function Banner({ imgBanner, imgText, boxShadow }) {
     return (
         <div className="home-banner">
             <img
                 src={imgBanner}
                 alt="paysage montagneux"
-                className="home-banner-image"
+                className={`home-banner-image ${
+                    boxShadow ? 'home-banner-shadow' : ''
+                }`}
             />
             <h1 className="home-banner-title">{imgText}</h1>
         </div>

@@ -19,19 +19,21 @@ const App = () => {
     return (
         <Router>
             <div className="app-container">
-                <Header />
-                <Routes>
-                    <Route
-                        path="/"
-                        element={<Home apartmentsData={apartments} />}
-                    />
-                    <Route path="/about" element={<About />} />
-                    <Route
-                        path="/property/:id"
-                        element={<Apartments apartmentsData={apartments} />}
-                    />
-                    <Route path="*" element={<NotFound />} />
-                </Routes>
+                <div className="content-wrap">
+                    <Header />
+                    <Routes>
+                        <Route
+                            path="/"
+                            element={<Home apartmentsData={apartments} />}
+                        />
+                        <Route path="/about" element={<About />} />
+                        <Route
+                            path="/property/:id"
+                            element={<Apartments apartmentsData={apartments} />}
+                        />
+                        <Route path="*" element={<NotFound />} />
+                    </Routes>
+                </div>
                 <Footer />
             </div>
         </Router>
